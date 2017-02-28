@@ -56,5 +56,7 @@
     <string>fbshareextension</string>
     
 </array>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>$(PRODUCT_NAME) uses photos</string>
 </dict>
 </plist>

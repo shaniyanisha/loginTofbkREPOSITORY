@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginToFBK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6xx-AW-jbN">
+                                <rect key="frame" x="67" y="479" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.88462479630000002" blue="0.089057621619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujz-ka-6WX">
+                                <rect key="frame" x="164" y="628" width="46" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="eUA-b0-x4N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRM-Qe-sTP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ujz-ka-6WX" secondAttribute="bottom" id="Pcr-Hv-Joe"/>
+                            <constraint firstItem="6xx-AW-jbN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="459" id="Rqj-EV-zkQ"/>
+                            <constraint firstItem="ujz-ka-6WX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f9D-Cv-Syt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6xx-AW-jbN" secondAttribute="bottom" constant="60" id="frh-Yi-44A"/>
+                            <constraint firstItem="6xx-AW-jbN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="pYg-BQ-H0U"/>
+                            <constraint firstItem="6xx-AW-jbN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyo-Sb-loR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addImage" destination="ujz-ka-6WX" id="D10-A1-kXy"/>
+                        <outlet property="images" destination="6xx-AW-jbN" id="WCG-Fn-Bzo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="126" y="-251"/>
         </scene>
     </scenes>
 </document>
